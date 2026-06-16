@@ -6,78 +6,95 @@
 <title>권효중 · AI Engineer Portfolio</title>
 <meta name="description" content="데이터 수집부터 LLM·백엔드까지, 데이터 한 사이클을 직접 돌리는 AI 엔지니어 권효중의 포트폴리오">
 <style>
-  :root{--navy:#14304d;--blue:#2f6db5;--accent:#1d6fb8;--bg:#f7f9fc;--card:#fff;--text:#1c2733;--muted:#5b6675;--line:#e3e9f0;}
+  :root{
+    --dark:#10242b; --primary:#0f766e; --accent:#14b8a6; --accent2:#2dd4bf;
+    --bg:#f6faf9; --card:#fff; --text:#1b2a2e; --muted:#5a6b6e; --line:#e2ece9;
+  }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Segoe UI','Malgun Gothic',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;}
-  a{color:var(--accent);text-decoration:none;}
+  body{font-family:'Segoe UI','Malgun Gothic',sans-serif;color:var(--text);background:var(--bg);line-height:1.65;}
+  a{color:var(--primary);text-decoration:none;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
   /* HERO */
-  header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:80px 0 64px;}
-  header .tag{font-size:14px;letter-spacing:2px;opacity:.85;}
-  header h1{font-size:46px;margin:8px 0 6px;font-weight:800;}
-  header .role{font-size:20px;opacity:.95;margin-bottom:18px;}
-  header .lead{font-size:17px;max-width:680px;opacity:.92;}
-  .links{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;}
-  .links a{background:rgba(255,255,255,.14);color:#fff;padding:10px 18px;border-radius:30px;font-size:15px;border:1px solid rgba(255,255,255,.25);transition:.2s;}
-  .links a:hover{background:#fff;color:var(--navy);}
-  /* METRICS */
-  .metrics{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;}
-  .metric{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:14px 20px;}
-  .metric b{display:block;font-size:22px;font-weight:800;}
-  .metric span{font-size:13px;opacity:.85;}
+  header{background:linear-gradient(135deg,#10242b 0%,#0f766e 100%);color:#fff;padding:72px 0 60px;}
+  .hero{display:flex;align-items:center;gap:42px;flex-wrap:wrap;}
+  .photo{width:172px;height:172px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.25);box-shadow:0 10px 30px rgba(0,0,0,.25);flex-shrink:0;}
+  .hero-txt{flex:1;min-width:280px;}
+  header .tag{font-size:13px;letter-spacing:3px;color:var(--accent2);font-weight:700;}
+  header h1{font-size:44px;margin:6px 0 4px;font-weight:800;}
+  header .role{font-size:19px;opacity:.95;margin-bottom:14px;}
+  header .lead{font-size:16px;max-width:640px;opacity:.9;}
+  .links{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;}
+  .links a{background:rgba(255,255,255,.12);color:#fff;padding:9px 18px;border-radius:30px;font-size:14px;border:1px solid rgba(255,255,255,.3);transition:.2s;}
+  .links a:hover{background:var(--accent2);color:var(--dark);border-color:var(--accent2);font-weight:600;}
+  .metrics{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;}
+  .metric{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:13px 20px;}
+  .metric b{display:block;font-size:21px;font-weight:800;color:var(--accent2);}
+  .metric span{font-size:12.5px;opacity:.85;}
   /* SECTION */
-  section{padding:60px 0;}
-  h2{font-size:28px;color:var(--navy);margin-bottom:8px;}
-  .sub{color:var(--muted);margin-bottom:28px;}
+  section{padding:58px 0;}
+  h2{font-size:27px;color:var(--dark);margin-bottom:6px;}
+  h2::after{content:"";display:block;width:46px;height:4px;background:var(--accent);border-radius:3px;margin-top:8px;}
+  .sub{color:var(--muted);margin:14px 0 26px;}
   /* ABOUT */
   .strengths{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
-  .strength{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;}
-  .strength b{color:var(--accent);font-size:17px;}
+  .strength{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;border-top:4px solid var(--accent);}
+  .strength b{color:var(--primary);font-size:17px;}
+  /* EDUCATION timeline */
+  .timeline{border-left:3px solid var(--accent);margin-left:8px;padding-left:24px;}
+  .tl{position:relative;margin-bottom:22px;}
+  .tl::before{content:"";position:absolute;left:-31px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--accent);border:3px solid #fff;}
+  .tl .when{font-size:13px;color:var(--accent);font-weight:700;}
+  .tl .what{font-size:17px;font-weight:700;color:var(--dark);margin:1px 0;}
+  .tl .desc{font-size:14px;color:var(--muted);}
   /* SKILLS */
   .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;}
   .skillcat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;}
-  .skillcat h3{font-size:16px;color:var(--navy);margin-bottom:12px;}
-  .chip{display:inline-block;background:#eef3f9;color:var(--navy);border-radius:20px;padding:5px 12px;font-size:13px;margin:0 6px 8px 0;}
+  .skillcat h3{font-size:16px;color:var(--dark);margin-bottom:12px;}
+  .chip{display:inline-block;background:#e7f6f3;color:var(--primary);border-radius:20px;padding:5px 12px;font-size:13px;margin:0 6px 8px 0;font-weight:500;}
   /* PROJECTS */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px;}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s;display:flex;flex-direction:column;}
-  .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(20,48,77,.12);}
-  .card .thumb{height:180px;background:#eef2f7 center/cover no-repeat;}
+  .card:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(15,118,110,.15);}
+  .card .thumb{height:180px;background:#e7f6f3 center/cover no-repeat;}
   .card .body{padding:18px 20px;flex:1;display:flex;flex-direction:column;}
   .card .cat{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.5px;}
-  .card h3{font-size:19px;margin:4px 0 6px;color:var(--navy);}
+  .card h3{font-size:19px;margin:4px 0 6px;color:var(--dark);}
   .card p{font-size:14px;color:var(--muted);flex:1;}
   .card .role{font-size:13px;color:var(--text);margin-top:10px;}
-  .card .role b{color:var(--accent);}
+  .card .role b{color:var(--primary);}
   .card .techs{margin-top:12px;}
-  .card .techs span{font-size:12px;background:#f0f4f9;color:var(--muted);border-radius:6px;padding:3px 8px;margin:0 5px 5px 0;display:inline-block;}
+  .card .techs span{font-size:12px;background:#eef4f2;color:var(--muted);border-radius:6px;padding:3px 8px;margin:0 5px 5px 0;display:inline-block;}
   .card .links2{margin-top:14px;}
   .card .links2 a{font-size:13px;font-weight:600;}
-  .badge{display:inline-block;font-size:11px;background:#fde8d4;color:#b5651d;border-radius:6px;padding:2px 8px;margin-left:6px;vertical-align:middle;}
-  /* FOOTER */
-  footer{background:var(--navy);color:#cdd8e4;text-align:center;padding:40px 0;}
+  .badge{display:inline-block;font-size:11px;background:#d9f3ee;color:var(--primary);border-radius:6px;padding:2px 8px;margin-left:6px;vertical-align:middle;}
+  footer{background:var(--dark);color:#bcd3ce;text-align:center;padding:42px 0;}
   footer a{color:#fff;}
-  @media(max-width:600px){header h1{font-size:34px;}header{padding:56px 0 44px;}}
+  @media(max-width:640px){header h1{font-size:32px;}.hero{gap:24px;justify-content:center;text-align:center;}.links{justify-content:center;}.metrics{justify-content:center;}}
 </style>
 </head>
 <body>
 
 <header>
+  <div class="wrap hero">
+    <img class="photo" src="assets/img/profile.png" alt="권효중 프로필 사진">
+    <div class="hero-txt">
+      <div class="tag">AI ENGINEER · PORTFOLIO</div>
+      <h1>권효중</h1>
+      <div class="role">데이터 수집부터 LLM·백엔드까지 — 한 사이클을 직접 돌리는 AI 엔지니어</div>
+      <div class="lead">"높은 점수를 의심하고, AI가 진짜 무엇을 보는지 확인하며, 더러운 실데이터를 끝까지 책임지는" 엔지니어입니다. (연세대 물리학 전공)</div>
+      <div class="links">
+        <a href="https://github.com/maxwell779" target="_blank">GitHub</a>
+        <a href="https://standing-whimsey-227.notion.site/_-10837ef64c53825b951681a9b18d1e72" target="_blank">Notion 포트폴리오</a>
+        <a href="mailto:rnjsgywnd777@naver.com">Email</a>
+      </div>
+    </div>
+  </div>
   <div class="wrap">
-    <div class="tag">AI ENGINEER · PORTFOLIO</div>
-    <h1>권효중</h1>
-    <div class="role">데이터 수집부터 LLM·백엔드까지 — 한 사이클을 직접 돌리는 AI 엔지니어</div>
-    <div class="lead">"높은 점수를 의심하고(데이터 누수·라벨 검증), AI가 진짜 무엇을 보는지 확인하며, 더러운 실데이터를 끝까지 책임지는" 엔지니어입니다. (연세대 물리학 전공)</div>
     <div class="metrics">
       <div class="metric"><b>0.986</b><span>산업 결함 탐지 AUROC</span></div>
       <div class="metric"><b>2.4B</b><span>EXAONE LLM 파인튜닝</span></div>
       <div class="metric"><b>15+</b><span>수행 프로젝트</span></div>
-      <div class="metric"><b>경진대회</b><span>본선 진출</span></div>
-    </div>
-    <div class="links">
-      <a href="https://github.com/maxwell779" target="_blank">GitHub</a>
-      <a href="mailto:rnjsgywnd777@naver.com">Email</a>
-      <a href="#" target="_blank" id="notion">Notion 포트폴리오</a>
+      <div class="metric"><b>본선</b><span>경진대회 진출</span></div>
     </div>
   </div>
 </header>
@@ -94,7 +111,30 @@
   </div>
 </section>
 
-<section id="skills" style="background:#eef3f9;">
+<section id="education" style="background:#eaf5f2;">
+  <div class="wrap">
+    <h2>Education &amp; Experience</h2>
+    <div class="timeline" style="margin-top:24px;">
+      <div class="tl">
+        <div class="when">2017.03 ~ 2023.02</div>
+        <div class="what">연세대학교 물리학과 졸업</div>
+        <div class="desc">가설 수립 → 실험 검증 → 정량화의 과학적 사고를 훈련.</div>
+      </div>
+      <div class="tl">
+        <div class="when">2026</div>
+        <div class="what">KDT 12기 · 경북대 융복합연구원 (AI·데이터 과정) 수료</div>
+        <div class="desc">데이터 분석 → 머신러닝 → 딥러닝 → LLM → 백엔드까지 15개+ 프로젝트 수행.</div>
+      </div>
+      <div class="tl">
+        <div class="when">2026</div>
+        <div class="what">엠엔비전 기업 협업 프로젝트 · AJIN 경진대회 본선 진출</div>
+        <div class="desc">기업 실데이터 비지도 이상탐지(Stage2 전담) / 정부지원 신청서 자동화 AI(풀스택).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
   <div class="wrap">
     <h2>Skills</h2>
     <p class="sub">⭐⭐⭐ 주력 · ⭐⭐ 활용 · ⭐ 경험</p>
@@ -111,7 +151,7 @@
   </div>
 </section>
 
-<section id="projects">
+<section id="projects" style="background:#eaf5f2;">
   <div class="wrap">
     <h2>Projects</h2>
     <p class="sub">중요도순. 카드 클릭 시 저장소로 이동합니다.</p>
@@ -205,17 +245,14 @@
 <footer>
   <div class="wrap">
     <p style="font-size:20px;color:#fff;margin-bottom:8px;">권효중 · AI Engineer</p>
-    <p><a href="https://github.com/maxwell779">github.com/maxwell779</a> &nbsp;·&nbsp; <a href="mailto:rnjsgywnd777@naver.com">rnjsgywnd777@naver.com</a></p>
+    <p>
+      <a href="https://github.com/maxwell779">GitHub</a> ·
+      <a href="https://standing-whimsey-227.notion.site/_-10837ef64c53825b951681a9b18d1e72">Notion</a> ·
+      <a href="mailto:rnjsgywnd777@naver.com">rnjsgywnd777@naver.com</a>
+    </p>
     <p style="font-size:13px;opacity:.7;margin-top:14px;">© 2026 Kwon Hyo Jung</p>
   </div>
 </footer>
-
-<!-- Notion 링크가 생기면 아래 'YOUR_NOTION_LINK'를 교체하세요 -->
-<script>
-  var notionUrl="https://standing-whimsey-227.notion.site/_-10837ef64c53825b951681a9b18d1e72";  // 예: "https://oo.notion.site/..."
-  var el=document.getElementById('notion');
-  if(notionUrl){el.href=notionUrl;}else{el.style.display='none';}
-</script>
 
 </body>
 </html>
