@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>권효중 · AI Engineer Portfolio</title>
+<meta name="description" content="데이터 수집부터 LLM·백엔드까지, 데이터 한 사이클을 직접 돌리는 AI 엔지니어 권효중의 포트폴리오">
+<style>
+  :root{--navy:#14304d;--blue:#2f6db5;--accent:#1d6fb8;--bg:#f7f9fc;--card:#fff;--text:#1c2733;--muted:#5b6675;--line:#e3e9f0;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI','Malgun Gothic',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;}
+  a{color:var(--accent);text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  /* HERO */
+  header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:80px 0 64px;}
+  header .tag{font-size:14px;letter-spacing:2px;opacity:.85;}
+  header h1{font-size:46px;margin:8px 0 6px;font-weight:800;}
+  header .role{font-size:20px;opacity:.95;margin-bottom:18px;}
+  header .lead{font-size:17px;max-width:680px;opacity:.92;}
+  .links{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;}
+  .links a{background:rgba(255,255,255,.14);color:#fff;padding:10px 18px;border-radius:30px;font-size:15px;border:1px solid rgba(255,255,255,.25);transition:.2s;}
+  .links a:hover{background:#fff;color:var(--navy);}
+  /* METRICS */
+  .metrics{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;}
+  .metric{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:14px 20px;}
+  .metric b{display:block;font-size:22px;font-weight:800;}
+  .metric span{font-size:13px;opacity:.85;}
+  /* SECTION */
+  section{padding:60px 0;}
+  h2{font-size:28px;color:var(--navy);margin-bottom:8px;}
+  .sub{color:var(--muted);margin-bottom:28px;}
+  /* ABOUT */
+  .strengths{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+  .strength{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;}
+  .strength b{color:var(--accent);font-size:17px;}
+  /* SKILLS */
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;}
+  .skillcat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;}
+  .skillcat h3{font-size:16px;color:var(--navy);margin-bottom:12px;}
+  .chip{display:inline-block;background:#eef3f9;color:var(--navy);border-radius:20px;padding:5px 12px;font-size:13px;margin:0 6px 8px 0;}
+  /* PROJECTS */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s;display:flex;flex-direction:column;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(20,48,77,.12);}
+  .card .thumb{height:180px;background:#eef2f7 center/cover no-repeat;}
+  .card .body{padding:18px 20px;flex:1;display:flex;flex-direction:column;}
+  .card .cat{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.5px;}
+  .card h3{font-size:19px;margin:4px 0 6px;color:var(--navy);}
+  .card p{font-size:14px;color:var(--muted);flex:1;}
+  .card .role{font-size:13px;color:var(--text);margin-top:10px;}
+  .card .role b{color:var(--accent);}
+  .card .techs{margin-top:12px;}
+  .card .techs span{font-size:12px;background:#f0f4f9;color:var(--muted);border-radius:6px;padding:3px 8px;margin:0 5px 5px 0;display:inline-block;}
+  .card .links2{margin-top:14px;}
+  .card .links2 a{font-size:13px;font-weight:600;}
+  .badge{display:inline-block;font-size:11px;background:#fde8d4;color:#b5651d;border-radius:6px;padding:2px 8px;margin-left:6px;vertical-align:middle;}
+  /* FOOTER */
+  footer{background:var(--navy);color:#cdd8e4;text-align:center;padding:40px 0;}
+  footer a{color:#fff;}
+  @media(max-width:600px){header h1{font-size:34px;}header{padding:56px 0 44px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="tag">AI ENGINEER · PORTFOLIO</div>
+    <h1>권효중</h1>
+    <div class="role">데이터 수집부터 LLM·백엔드까지 — 한 사이클을 직접 돌리는 AI 엔지니어</div>
+    <div class="lead">"높은 점수를 의심하고(데이터 누수·라벨 검증), AI가 진짜 무엇을 보는지 확인하며, 더러운 실데이터를 끝까지 책임지는" 엔지니어입니다. (연세대 물리학 전공)</div>
+    <div class="metrics">
+      <div class="metric"><b>0.986</b><span>산업 결함 탐지 AUROC</span></div>
+      <div class="metric"><b>2.4B</b><span>EXAONE LLM 파인튜닝</span></div>
+      <div class="metric"><b>15+</b><span>수행 프로젝트</span></div>
+      <div class="metric"><b>경진대회</b><span>본선 진출</span></div>
+    </div>
+    <div class="links">
+      <a href="https://github.com/maxwell779" target="_blank">GitHub</a>
+      <a href="mailto:rnjsgywnd777@naver.com">Email</a>
+      <a href="#" target="_blank" id="notion">Notion 포트폴리오</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="sub">KDT(경북대 융복합연구원) AI·데이터 과정에서 기업 협업·경진대회 포함 15개+ 프로젝트를 수행했습니다.</p>
+    <div class="strengths">
+      <div class="strength"><b>① 검증을 끝까지 한다</b><br>물리 실험처럼 가설을 세우고 데이터 누수·라벨·재현성(seed)을 검증해 결과를 신뢰 가능하게 만든다.</div>
+      <div class="strength"><b>② 평가지표를 비판적으로 고른다</b><br>정확도 맹신 대신 누수 검증·F2·AUROC 등 문제에 맞는 지표를 선택한다.</div>
+      <div class="strength"><b>③ 도메인에 맞는 기술을 고른다</b><br>파인튜닝·RAG·임베딩·이상탐지를 데이터 특성에 맞게 선택한다.</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:#eef3f9;">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="sub">⭐⭐⭐ 주력 · ⭐⭐ 활용 · ⭐ 경험</p>
+    <div class="skills">
+      <div class="skillcat"><h3>💻 언어 &amp; 데이터</h3>
+        <span class="chip">Python ⭐⭐⭐</span><span class="chip">SQL ⭐⭐</span><span class="chip">pandas ⭐⭐⭐</span><span class="chip">numpy ⭐⭐</span><span class="chip">matplotlib/seaborn</span></div>
+      <div class="skillcat"><h3>🤖 ML / 딥러닝</h3>
+        <span class="chip">PyTorch ⭐⭐⭐</span><span class="chip">scikit-learn ⭐⭐</span><span class="chip">XGBoost/LightGBM ⭐⭐</span><span class="chip">YOLO ⭐⭐</span><span class="chip">이상탐지(LOF) ⭐⭐</span></div>
+      <div class="skillcat"><h3>🧠 LLM / NLP</h3>
+        <span class="chip">HuggingFace ⭐⭐</span><span class="chip">LoRA 파인튜닝 ⭐</span><span class="chip">RAG ⭐</span></div>
+      <div class="skillcat"><h3>🛠 백엔드 · UI · 도구</h3>
+        <span class="chip">FastAPI ⭐⭐</span><span class="chip">Streamlit ⭐⭐</span><span class="chip">React ⭐</span><span class="chip">MySQL ⭐⭐</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">Selenium</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="sub">중요도순. 카드 클릭 시 저장소로 이동합니다.</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('assets/img/mnvision.png')"></div>
+        <div class="body"><div class="cat">기업 · 이상탐지</div>
+          <h3>엠엔비전 버스바 결함 탐지<span class="badge">기업</span></h3>
+          <p>양품만 학습(비지도 OCC)해 EV 배터리 버스바의 외관·구조 결함을 탐지.</p>
+          <div class="role">역할: <b>Stage2(외관 비지도탐지) 전담</b> · 외관 AUROC 0.985</div>
+          <div class="techs"><span>DINOv2</span><span>ReConPatch</span><span>PyTorch</span></div>
+          <div class="links2"><a href="https://github.com/KDT12-mnvision/KDT12-mnvison/tree/feature/stage2-sweep-portfolio" target="_blank">GitHub →</a></div>
+        </div></div>
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('assets/img/ajin.png')"></div>
+        <div class="body"><div class="cat">경진대회 · 풀스택</div>
+          <h3>AJIN BizAI 신청서 자동화<span class="badge">본선</span></h3>
+          <p>공고 검색→AI 분석→사업계획서 초안→평가→Export 원스톱 풀스택 AI SaaS.</p>
+          <div class="role">역할: <b>Step1~5 워크플로우·백엔드·통합</b> · 작성 20h→6h</div>
+          <div class="techs"><span>FastAPI</span><span>RAG</span><span>LLM</span></div>
+          <div class="links2"><a href="https://github.com/KDT12-AJIN-PROJECT/Ajin-BizAI" target="_blank">GitHub →</a></div>
+        </div></div>
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('assets/img/chatbot.png')"></div>
+        <div class="body"><div class="cat">LLM · NLP</div>
+          <h3>NEW LEARN 교육 챗봇</h3>
+          <p>도메인 특성에 맞춰 파인튜닝/RAG/임베딩을 매칭한 멀티도메인 챗봇.</p>
+          <div class="role">역할: <b>반도체 LLM 파인튜닝(단독)</b> · 2.4B 파인튜닝</div>
+          <div class="techs"><span>EXAONE</span><span>LoRA</span><span>transformers</span></div>
+          <div class="links2"><a href="https://github.com/new-learn12/new-learn" target="_blank">GitHub →</a></div>
+        </div></div>
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('assets/img/wildfire.jpg')"></div>
+        <div class="body"><div class="cat">딥러닝 · 객체탐지</div>
+          <h3>산불·연기 실시간 탐지</h3>
+          <p>YOLO 탐지 + ResNet 2차 분류 Hybrid로 구름·안개 오탐을 제거.</p>
+          <div class="role">역할: <b>딥러닝 파이프라인 전체</b> · mAP50 0.78</div>
+          <div class="techs"><span>YOLOv8</span><span>ResNet</span><span>SAHI</span></div>
+          <div class="links2"><a href="https://github.com/maxwell779/kdt-portfolio/tree/main/10_wildfire_detection" target="_blank">GitHub →</a></div>
+        </div></div>
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('assets/img/election.png')"></div>
+        <div class="body"><div class="cat">풀스택 · 백엔드</div>
+          <h3>PolyElection 선거 대시보드</h3>
+          <p>선관위+예측시장+뉴스 감성분석을 결합한 풀스택 선거 분석 대시보드.</p>
+          <div class="role">역할: <b>백엔드 전체(FastAPI+MySQL)</b> · 후보 8,577 정합</div>
+          <div class="techs"><span>FastAPI</span><span>MySQL</span><span>Gemini</span><span>Docker</span></div>
+          <div class="links2"><a href="https://github.com/maxwell779/korean_election_project" target="_blank">GitHub →</a></div>
+        </div></div>
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('assets/img/dog.png')"></div>
+        <div class="body"><div class="cat">추천 · 풀스택</div>
+          <h3>Paw-옹 유기견 입양 매칭</h3>
+          <p>30문항 설문과 견종 특성을 가중치 스코어링으로 매칭하는 추천 플랫폼.</p>
+          <div class="role">역할: <b>팀장 + 매칭 엔진</b> · 5페이지 프로토타입</div>
+          <div class="techs"><span>Streamlit</span><span>추천 알고리즘</span><span>pytest</span></div>
+          <div class="links2"><a href="https://github.com/paw-ong1/paw-ong" target="_blank">GitHub →</a></div>
+        </div></div>
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('assets/img/pill.png')"></div>
+        <div class="body"><div class="cat">컴퓨터비전</div>
+          <h3>알약 이미지 이상탐지</h3>
+          <p>정상만 학습해 결함을 잡는 비지도 이상탐지. 5개 모델을 F2-score로 비교.</p>
+          <div class="role">역할: <b>모델 비교</b> · LOF F2-score 0.980</div>
+          <div class="techs"><span>IsolationForest</span><span>LOF</span><span>HOG/HSV</span></div>
+          <div class="links2"><a href="https://github.com/maxwell779/kdt-portfolio/tree/main/09_pill_anomaly_cv" target="_blank">GitHub →</a></div>
+        </div></div>
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('assets/img/waste.png')"></div>
+        <div class="body"><div class="cat">머신러닝</div>
+          <h3>식료품 폐기 리스크 ML</h3>
+          <p>재고 데이터로 폐기 위험도를 예측. 정확도 1.00을 의심해 데이터 누수를 검증.</p>
+          <div class="role">역할: <b>폐기 회귀·스태킹</b> · MAE 0.0337</div>
+          <div class="techs"><span>XGBoost</span><span>LightGBM</span><span>Stacking</span></div>
+          <div class="links2"><a href="https://github.com/maxwell779/kdt-portfolio/tree/main/08_grocery_waste_ml" target="_blank">GitHub →</a></div>
+        </div></div>
+
+    </div>
+    <p style="margin-top:26px;text-align:center;"><a href="https://github.com/maxwell779/kdt-portfolio" target="_blank">＋ KDT 프로젝트 전체 보기 (kdt-portfolio)</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p style="font-size:20px;color:#fff;margin-bottom:8px;">권효중 · AI Engineer</p>
+    <p><a href="https://github.com/maxwell779">github.com/maxwell779</a> &nbsp;·&nbsp; <a href="mailto:rnjsgywnd777@naver.com">rnjsgywnd777@naver.com</a></p>
+    <p style="font-size:13px;opacity:.7;margin-top:14px;">© 2026 Kwon Hyo Jung</p>
+  </div>
+</footer>
+
+<!-- Notion 링크가 생기면 아래 'YOUR_NOTION_LINK'를 교체하세요 -->
+<script>
+  var notionUrl="";  // 예: "https://oo.notion.site/..."
+  var el=document.getElementById('notion');
+  if(notionUrl){el.href=notionUrl;}else{el.style.display='none';}
+</script>
+
+</body>
+</html>
